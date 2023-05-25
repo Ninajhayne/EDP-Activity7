@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            opacity: 0; /* make things invisible upon start */
+            -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+            -moz-animation: fadeIn ease-in 1;
+            animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            animation-duration: 1s;
+        }
+
+            .fade-in.one {
+                -webkit-animation-delay: 0.7s;
+                -moz-animation-delay: 0.7s;
+                animation-delay: 0.7s;
+            }
+
+            .fade-in.two {
+                -webkit-animation-delay: 1.4s;
+                -moz-animation-delay: 1.4s;
+                animation-delay: 1.4s;
+            }
+
+            .fade-in.three {
+                -webkit-animation-delay: 1.8s;
+                -moz-animation-delay: 1.8s;
+                animation-delay: 1.8s;
+            }
+
+        body {
+            font-size: 14px;
+            font-family: 'Work Sans', sans-serif;
+            color: #666;
+        }
+
+        a {
+            color: #00b8d4;
+        }
+
+            a:hover {
+                color: #000;
+                font-style: none;
+            }
+
+            a:active {
+                color: #00b8d4;
+            }
+
+        h1 {
+            color: #222;
+        }
+
+        h2 {
+            color: #896556;
+        }
+
+        .num {
+            color: #687477;
+            font-size: 0.8em;
+        }
+
+        ul {
+            margin-left: -1em;
+        }
+
+        li {
+            display: inline;
+            list-style: none;
+            list-style-position: outside;
+            margin-left: 20px;
+        }
+
+        .main {
+            padding: 0px 40px 40px 40px;
+        }
+
+        .nav {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .content {
+            margin: 0em 0em 4em 0em;
+        }
+
+        .heading {
+            text-align: center;
+            background-color: #E2C2B3;
+            padding: 10px;
+            /*position: fixed; */
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .section-head {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .subhead {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 100%;
+            /*position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;*/
+            background-color: #AF7E6A;
+            overflow-x: hidden;
+        }
+
+            .sidenav a, .dropdown-btn {
+                padding: 20px 30px 5px 30px;
+                text-decoration: none;
+                font-size: 16px;
+                color: white;
+                display: block;
+                border: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+                background-color: #AF7E6A;
+            }
+
+                .sidenav a:hover, .dropdown-btn:hover {
+                    color: #f1f1f1;
+                    background-color: #E2C2B3;
+                }
+
+        .dropdown-container {
+            display: none;
+            padding-left: 8px;
+        }
+
+            .dropdown-container a {
+                padding-left: 50px;
+            }
+
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .intro {
+            font-size: 5em;
+            font-weight: bold;
+        }
+
+        .blurb {
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .highlight-text {
+            font-size: 2em;
+            margin: 0.8em 0em 0.5em 0em;
+        }
+
+        .row {
+            margin: 0px 35px 0px;
+        }
+
+        .col {
+            padding: 30px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+
+        <!-- Super sweet intro heading -->
+        <div class="heading">
+            <div class="row">
+                <div class="col-md-12">
+                    <img style="width: 15%" src="https://shorturl.at/efiO5">
+                    <h1 class="fade-in one intro" style="color: white; margin: 10px; font-size: 3.5em">User Manual</h1>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!--introduction -->
+        <div class="content" id="intro">
+
+            <div class="row">
+                <div class=" col col-md-4">
+                    <div class="sidenav">
+                        <button class="dropdown-btn">
+                            Introduction
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#purpose">Purpose</a>
+                            <a href="#scope">Scope</a>
+                            <a href="#audience">Audience</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Getting Started
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#accessweb">Accessing the Website</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Navigation
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#mainmenu">Main Menu</a>
+                            <a href="#submenus">Submenus</a>
+                            <a href="#searchfunction">Search Function</a>
+                        </div>
+
+
+                        <button class="dropdown-btn">
+                            User Login
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#login">Logging In</a>
+                        </div>
+
+
+                        <button class="dropdown-btn">
+                            Customer Management
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Cview">Viewing Customer Details</a>
+                            <a href="#Csearch">Search for Customers</a>
+                            <a href="#Cadd">Adding a Customers</a>
+                            <a href="#Cupdate">Updating Customer Information</a>
+                            <a href="#Cdelete">Deleting a Customers</a>
+                            <a href="#Cprint">Print Customer List</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            View Products
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Pview">Viewing Product Details</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Order Management
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Oview">Viewing Order Details</a>
+                            <a href="#Osearch">Searching for Orders</a>
+                            <a href="#Oadd">Adding an Order</a>
+                            <a href="#Oupdate">Updating Order Information</a>
+                            <a href="#Odelete">Deleting an Order</a>
+                            <a href="#Oprint">Print Order List</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Transaction Management
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Tview">Viewing Transaction Details</a>
+                            <a href="#Tprint">Print Transaction Report</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Total Sales Management
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Sview">Viewing Total Sales</a>
+                            <a href="#Sprint">Print Total Sales</a>
+                        </div>
+
+                        <button class="dropdown-btn">
+                            Backup Data
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#Bperform">Performing a Manual Backup</a>
+                            <a href="#Blocate">Locate Backup Data</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col col-md-8">
+                    <!--introduction-->
+                    <h2 class="section-head"><div class="num">1</div> Introduction</h2>
+
+                    <!--purpose -->
+                    <div class="subhead" id="purpose">
+                        <p class="highlight-text">1.1 Purpose</p>
+                        <p>This user manual provides detailed instructions and guidance to users on how to effectively navigate and utilize the application's features and functionality. It includes a step-by-step procedure for system access and use. It serves as a reference tool, helping users understand how to interact with the application and perform various tasks to achieve their desired outcomes.</p>
+                    </div>
+
+                    <!--scope -->
+                    <div class="subhead" id="scope">
+                        <p class="highlight-text">1.2 Scope</p>
+                        <p>The user manual covers all essential features, functions, and tasks users can perform on the application. It provides detailed instructions on user registration for user login, viewing and managing customers, products, orders, transactions, total sales, performing backups, and locating backup data. The user manual aims to equip users with the necessary knowledge and guidance to effectively utilize the application's features and enhance their overall user experience.</p>
+                    </div>
+
+                    <!--audience -->
+                    <div class="subhead" id="audience">
+                        <p class="highlight-text">1.3 Audience</p>
+                        <p>This manual is designed for new and existing users of the application who require guidance on utilizing its features and functionalities. It caters to users with varying technical proficiency and familiarity with the application.</p>
+                    </div>
+
+                    <hr>
+
+                    <!--Getting Started -->
+                    <h2 class="section-head"><div class="num">2</div> Getting Started</h2>
+
+                    <!--accessing the website -->
+                    <div class="subhead" id="accessweb">
+                        <p class="highlight-text">2.1 Accessing the Website</p>
+                        <p>To access the application, users need to launch the application on their device and navigate to the login screen. They can do this by clicking on the application icon and entering their login credentials, such as username and password. Once logged in, users will have full access to the application's features and content directly within the interface.</p>
+                        <img src="https://shorturl.at/grxD3">
+                    </div>
+
+                    <hr>
+
+                    <!--Navigation -->
+                    <h2 class="section-head"><div class="num">3</div> Navigation</h2>
+
+                    <!--Main Menu -->
+                    <div class="subhead" id="mainmenu">
+                        <p class="highlight-text">3.1 Main Menu</p>
+                        <p>The main menu serves as a centralized navigation hub, providing users with quick access to various sections and features. Users can find options and shortcuts to essential functions, such as customers,  products,  orders list, transactions and total sales, enabling seamless navigation and efficiently utilizing the application's capabilities. In addition, features like Backup Data and Locate Backup was included in the main menu.</p>
+                        <img src="https://shorturl.at/byELP">
+                    </div>
+
+                    <!--Sub Menu -->
+                    <div class="subhead" id="submenus">
+                        <p class="highlight-text">3.2 Submenus</p>
+                        <p>The submenu provides a secondary level of navigation within specific sections or features. It presents additional options and actions related to the selected menu item, allowing users to efficiently refine their actions, access specific functionalities, and perform context-specific tasks. This includes managing customers, orders,  and transactions.</p>
+                    </div>
+
+                    <!--Search Function -->
+                    <div class="subhead" id="searchfunction">
+                        <p class="highlight-text">3.3 Search Function</p>
+                        <p>The search function in the application allows users to quickly locate specific information or entities within the application's database. By entering the customer id can initiate a search and retrieve results that match their search query, facilitating efficient data retrieval and navigation within the application.</p>
+                        <img src="https://shorturl.at/eftvL">
+                    </div>
+
+                    <hr>
+
+                    <!--User Login -->
+                    <h2 class="section-head"><div class="num">4</div> User Login</h2>
+
+                    <!--Logging In -->
+                    <div class="subhead" id="login">
+                        <p class="highlight-text">4.1 Logging In</p>
+                        <p>To log in to the application, users can navigate to the login screen and enter their registered username and password. Once logged in successfully, users will gain access to their personalized account and be able to utilize the full functionality of the application.</p>
+                        <img src="https://shorturl.at/qwUVX">
+                        <p><center><i>Login to the application using the registered username and password.</i></center></p>
+                    </div>
+
+                    <hr>
+
+                    <!--customer-->
+                    <h2 class="section-head"><div class="num">5</div> Customer Management</h2>
+
+                    <!--view -->
+                    <div class="subhead" id="Cview">
+                        <p class="highlight-text">5.1  Viewing Customer Details</p>
+                        <p>To view the customer list, users can access the customer list section and select the "Customer List" option. This will display a comprehensive list of all customers, including their customer id, name, contact number, address, city and postal code.</p>
+                        <img src="https://shorturl.at/drvyO">
+                    </div>
+
+                    <!--search -->
+                    <div class="subhead" id="Csearch">
+                        <p class="highlight-text">5.2  Searching for Customers</p>
+                        <p>To search for customers, users can navigate to the manage customer section and locate the search function. They can enter the customer id to search for a particular customer. The application will then provide search results, allowing users to view customer details, such as customer id, name, contact number, address, city and postal code.</p>
+                        <img src="https://shorturl.at/sBGT8">
+                        <p><center><i>Search customer information using their customer ID.</i></center></p>
+                        <br>
+                        <img src="https://shorturl.at/jlyEO">
+                        <p><center><i>Search result will display customer information.</i></center></p>
+
+                    </div>
+
+
+                    <!--add -->
+                    <div class="subhead" id="Cadd">
+                        <p class="highlight-text">5.3  Adding a Customer</p>
+                        <p>The user can add customer information in the manage customer section by clicking the "Add Record" button. Click on it to enter the required customer information, such as customer id, name, contact number, address, city and postal code. Save the information to create a new customer information.</p>
+                        <img src="https://shorturl.at/syMUX">
+                        <p><center><i>Enter the customer information and click the "Add Record" button.</i></center></p>
+                        <br>
+                        <img src="https://shorturl.at/lquSY">
+                        <p><center><i>The application will confirm the added record.</i></center></p>
+                    </div>
+
+                    <!--update -->
+                    <div class="subhead" id="Cupdate">
+                        <p class="highlight-text">5.4 Updating Customer Information</p>
+                        <p>To update customer information, users can search for a specific customer id by using the search functionality within the manage customer section. They can enter the customer id to search for a particular customer. Once found, users can modify the customer's information, such as name, contact number, address, city and postal code. After making the necessary changes, users can save the updates by clicking the "Update Record."</p>
+                        <img src="https://shorturl.at/ruxJ1">
+                        <p><center><i>Edit the data and click "Update Record" to save.</i></center></p>
+                        <br>
+                        <img src="https://shorturl.at/cjovX">
+                        <p><center><i>The application will confirm the updated record.</i></center></p>
+                    </div>
+
+                    <!--delete -->
+                    <div class="subhead" id="Cdelete">
+                        <p class="highlight-text">5.5 Deleting a Customer</p>
+                        <p>To delete a customer from the list, users can search for the customer by entering their customer ID within the manage customer section. Once the customer is located, users can permanently remove the customer from the list by clicking the "Delete Record" button.</p>
+                        <img src="https://shorturl.at/lntAD">
+                        <p><center><i>Search the record you want to delete and click "Delete Record".</i></center></p>
+                        <br>
+                        <img src="https://shorturl.at/zBGI7">
+                        <p><center><i>The application will confirm if you want to proceed in deleting the record.</i></center></p>
+                    </div>
+
+                    <!--print -->
+                    <div class="subhead" id="Cprint">
+                        <p class="highlight-text">5.6 Print Customer List</p>
+                        <p>To print the customer list, users can navigate to the customer list section and select the "Print" button. This will generate a report containing the customer list, which will be saved as an Excel (.xls) file format.</p>
+                        <img src="https://shorturl.at/qJ127">
+                        <p><center><i>Click the "Print" button to download the list.</i></center></p><br>
+                        <img src="https://shorturl.at/pLY57">
+                        <p><center><i>The application will confirm the filename of the downloaded file.</i></center></p><br>
+                        <img src="https://shorturl.at/dTZ26">
+                    </div>
+
+                    <hr>
+                    <!--product-->
+                    <h2 class="section-head"><div class="num">6</div> View Products</h2>
+
+                    <!--view -->
+                    <div class="subhead" id="Pview">
+                        <p class="highlight-text">6.1  Viewing Product Details</p>
+                        <p>To view the product list, users can access the product section. This will display a comprehensive list of all products, including the name of the product and its price.</p>
+                        <img src="https://shorturl.at/mEMZ5">
+                    </div>
+
+                    <hr>
+
+                    <!--order-->
+                    <h2 class="section-head"><div class="num">7</div> Order Management</h2>
+
+                    <!--view -->
+                    <div class="subhead" id="Oview">
+                        <p class="highlight-text">7.1  Viewing Order Details</p>
+                        <p>To view the order list, users can access the order list section and select the "Order List" option. This will display a comprehensive list of all orders, including their order id, customer id, product id, QTY, price per item and date.</p>
+                        <img src="https://shorturl.at/cdlSW">
+                    </div>
+
+                    <!--search -->
+                    <div class="subhead" id="Osearch">
+                        <p class="highlight-text">7.2  Searching for Orders</p>
+                        <p>To search for order, users can navigate to the manage orders section and locate the search function. They can enter the order id to search for a particular order. The application will then provide search results, allowing users to view order report, such as order id, customer id, product id, QTY, price per item and date.</p>
+                        <img src="https://shorturl.at/cemY7">
+                        <p><center><i>Search order information using their order ID.</i></center></p><br>
+                        <img src="https://shorturl.at/hDIM9">
+                        <p><center><i>Search result will display order information.</i></center></p>
+                    </div>
+
+                    <!--add -->
+                    <div class="subhead" id="Oadd">
+                        <p class="highlight-text">7.3  Adding an Order</p>
+                        <p>The user can add order information in the manage orders section by clicking the "Add Record" button. Click on it to enter the required order information, such as order id, customer id, product id, QTY, price per item and date. Save the information to create a new order information.</p>
+                        <img src="https://shorturl.at/AKMQ6">
+                        <p><center><i>Enter the order information and click the "Add Record" button.</i></center></p><br>
+                        <img src="https://shorturl.at/lquSY">
+                        <p><center><i>The application will confirm the added record.</i></center></p>
+                    </div>
+
+                    <!--update -->
+                    <div class="subhead" id="Oupdate">
+                        <p class="highlight-text">7.4 Updating Order Information</p>
+                        <p>To update order information, users can search for a specific order id by using the search functionality within the manage orders section. They can enter the order id to search for a particular customer. Once found, users can modify the order's information, such as order id, customer id, product id, QTY, price per item and date. After making the necessary changes, users can save the updates by clicking the "Update Record."</p>
+                        <img src="https://shorturl.at/mqzD2">
+                        <p><center><i>Edit the data and click "Update Record" to save.</i></center></p><br>
+                        <img src="https://shorturl.at/cjovX">
+                        <p><center><i>The application will confirm the updated record.</i></center></p>
+                    </div>
+
+                    <!--delete -->
+                    <div class="subhead" id="Odelete">
+                        <p class="highlight-text">7.5 Deleting an Order</p>
+                        <p>To delete a order from the list, users can search for the order by entering their order ID within the manage orders section. Once the order information is located, users can permanently remove the customer from the list by clicking the "Delete Record" button.</p>
+                        <img src="https://shorturl.at/hEMQX">
+                        <p><center><i>Search the record you want to delete and click "Delete Record".</i></center></p><br>
+                        <img src="https://shorturl.at/zBGI7">
+                        <p><center><i>The application will confirm if you want to proceed in deleting the record.</i></center></p>
+                    </div>
+
+                    <!--print -->
+                    <div class="subhead" id="Oprint">
+                        <p class="highlight-text">7.6 Print Order List</p>
+                        <p>To print the order list, users can navigate to the order list section and select the "Print" button. This will generate a report containing the order report, which will be saved as an Excel (.xls) file format.</p>
+                        <img src="https://shorturl.at/lFGPS">
+                        <p><center><i>Click the "Print" button to download the list.</i></center></p><br>
+                        <img src="https://shorturl.at/qCQZ5">
+                        <p><center><i>The application will confirm the filename of the downloaded file.</i></center></p><br>
+                        <img src="https://shorturl.at/aT178"><br>
+                        <img src="https://shorturl.at/optOU">
+                    </div>
+
+                    <hr>
+
+                    <!--transaction-->
+                    <h2 class="section-head"><div class="num">8</div> Transaction Management</h2>
+
+                    <!--view -->
+                    <div class="subhead" id="Tview">
+                        <p class="highlight-text">8.1  Viewing Transaction Details</p>
+                        <p>To view the transaction list, users can access the transaction report section. This will display a comprehensive list of all transaction, including the report id, customer id, product id, order id and payment id.</p>
+                        <img src="https://shorturl.at/yINW3">
+                    </div>
+
+                    <!--print -->
+                    <div class="subhead" id="Tprint">
+                        <p class="highlight-text">8.2 Print Transaction Report</p>
+                        <p>To print the transaction list, users can navigate to the transaction section and select the "Print" button. This will generate a report containing the transaction report, which will be saved as an Excel (.xls) file format.</p>
+                        <img src="https://shorturl.at/bgsE2">
+                        <p><center><i>Click the "Print" button to download the list.</i></center></p><br>
+                        <img src="https://shorturl.at/bjX23">
+                        <p><center><i>The application will confirm the filename of the downloaded file.</i></center></p><br>
+                        <img src="https://shorturl.at/ckrxJ">
+
+                        <hr>
+
+                        <!--Sales-->
+                        <h2 class="section-head"><div class="num">9</div> Total Sales Management</h2>
+
+                        <!--view -->
+                        <div class="subhead" id="Sview">
+                            <p class="highlight-text">9.1  Viewing Total Sales</p>
+                            <p>To view the total sales of the products, users can access the total sales section. This will display a comprehensive list of the total sales, including the product id and total revenue of the product.</p>
+                            <img src="https://shorturl.at/lsvNW">
+                        </div>
+
+                        <!--print -->
+                        <div class="subhead">
+                            <p class="highlight-text" id="Sprint">9.2  Print Total Sales</p>
+                            <p>To print the total sales, users can navigate to the total sales section and select the "Print" button. This will generate a report containing the total sales report, which will be saved as an Excel (.xls) file format.</p>
+                            <img src="https://shorturl.at/BMQ35">
+                            <p><center><i>Click the "Print" button to download the list.</i></center></p><br>
+                            <img src="https://shorturl.at/LWZ56">
+                            <p><center><i>The application will confirm the filename of the downloaded file.</i></center></p><br>
+                            <img src="https://shorturl.at/frwD9"><br>
+                            <img src="https://shorturl.at/fBGQ1">
+                        </div>
+
+                        <hr>
+
+                        <!--Backup-->
+                        <h2 class="section-head"><div class="num">10</div> Backup Data</h2>
+
+                        <!--perform backup -->
+                        <div class="subhead">
+                            <p class="highlight-text" id="Bperform">10.1  Performing a Manual Backup</p>
+                            <p>To create a data backup in the application, users can access the backup data feature within the homepage. By selecting the "Backup Database," users can initiate the backup process, saving a copy of the application's data, ensuring data integrity and safeguarding against potential data loss or system failures. The backup data will be saved under the user's desktop folder.</p>
+                            <img src="https://shorturl.at/vxEJ9">
+                            <p><center><i>Click the "Backup Database" button to backup the files.</i></center></p>
+                        </div>
+
+                        <!--locate -->
+                        <div class="subhead">
+                            <p class="highlight-text" id="Blocate">10.2  Locate Backup Data</p>
+                            <p>To locate the backup data in the application, users can navigate to the homepage. Within this section, users can access the "Locate Data" button, which provides the path or directory where the backup files are stored. Users can refer to this information to easily locate and access the backup data files for restoration or archival purposes.</p>
+                            <img src="https://shorturl.at/ktI58"><br>
+                            <img src="https://shorturl.at/cfiK3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cool scroll effect from this guy: https://gist.github.com/flesler/ -->
+        <!-- Include jQuery from somewhere, must use version 1.8 or above -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include latest jquery.scrollTo, can download from https://github.com/flesler/jquery.scrollTo/releases -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+        <!-- Initialize the plugin, the contents of the script can be inlined here, of course -->
+
+
+        <script type="text/javascript" src="js/init.js"></script>
+        <script>
+	  // Bind to the click of all links with a #hash in the href
+	  $('a[href^="#"]').click(function(e) {
+		// Prevent the jump and the #hash from appearing on the address bar
+		e.preventDefault();
+		// Scroll the window, stop any previous animation, stop on user manual scroll
+		// Check https://github.com/flesler/jquery.scrollTo for more customizability
+		$(window).stop(true).scrollTo(this.hash, {duration:500, interrupt:false});
+	  });
+        </script>
+        <script>
+		/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+			  dropdownContent.style.display = "none";
+			} else {
+			  dropdownContent.style.display = "block";
+			}
+		  });
+		}
+        </script>
+</body>
+</html>
